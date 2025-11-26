@@ -1,6 +1,9 @@
 spring:
   application:
     name: TerroristBE
+  graphql:
+    graphiql:
+      enabled: true
   datasource:
     url: jdbc:sqlite:data/terrorist.db
     driver-class-name: org.sqlite.JDBC

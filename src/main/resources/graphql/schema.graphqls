@@ -1,0 +1,22 @@
+type Query {
+    terroristsByLastName(lastname: String!): [Terrorist!]!
+}
+
+type Terrorist {
+    id: ID!
+    nrn: String
+    lastname: String
+    firstname: String
+    middlename: String
+    wholename: String
+    gender: String
+    birthdate: String
+    birthplace: String
+    birthcountry: String
+    function: String
+    remark: String
+    type: String
+    regulation: String
+    publicationdate: String
+    embargo: String
+}

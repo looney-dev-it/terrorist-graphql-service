@@ -3,6 +3,7 @@ package com.ehb.javaadvanced.TerroristBE.domain;
 
 public class Terrorist {
 
+    private Long id;
     private String nrn;
     private String lastname;
     private String firstname;
@@ -20,6 +21,15 @@ public class Terrorist {
     private String embargo;
 
     // Getters and setters
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getEmbargo() {
         return embargo;

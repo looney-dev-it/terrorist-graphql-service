@@ -10,4 +10,10 @@ public class TerroristMapper {
         BeanUtils.copyProperties(t,e);
         return e;
     }
+
+    public static Terrorist toDomain(TerroristEntity e) {
+        Terrorist t = new Terrorist();
+        BeanUtils.copyProperties(e,t);
+        return t;
+    }
 }

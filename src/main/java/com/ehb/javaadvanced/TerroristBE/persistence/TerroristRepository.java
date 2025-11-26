@@ -1,4 +1,7 @@
 package com.ehb.javaadvanced.TerroristBE.persistence;
 
-public class TerroristRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TerroristRepository extends JpaRepository<TerroristEntity, String> {
+
 }

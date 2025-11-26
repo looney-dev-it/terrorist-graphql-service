@@ -1,5 +1,7 @@
-package com.ehb.javaadvanced.TerroristBE.Ingestion;
+package com.ehb.javaadvanced.TerroristBE.ingestion;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -11,8 +13,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 @Service
-public class TerroristBEExcelDownloadService {
-
+public class ExcelDownloadService {
+    private static final Logger log = LoggerFactory.getLogger(ExcelDownloadService.class);
     private final HttpClient httpClient = HttpClient.newHttpClient();
 
     public Path downloadExcel(String url, Path target) throws IOException, InterruptedException {
@@ -21,7 +23,7 @@ public class TerroristBEExcelDownloadService {
 
         Files.createDirectories(target.getParent());
         Files.write(target, response.body());
-
+        log.debug("Downloaded excel file from {} to {}", url, target);
         return target;
     }
 }

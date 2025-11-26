@@ -1,4 +1,4 @@
-package com.ehb.javaadvanced.TerroristBE.Ingestion;
+package com.ehb.javaadvanced.TerroristBE.ingestion;
 
 import org.springframework.stereotype.Service;
 
@@ -9,9 +9,9 @@ import java.security.MessageDigest;
 import java.util.Arrays;
 
 @Service
-public class FileVersioningChecker {
+public class FileVersionChecker {
 
-    public boolean isDifferent(Path oldFile, Path newFile) throws Exception {
+    public boolean isIdentical(Path oldFile, Path newFile) throws Exception {
         return Arrays.equals(sha256(oldFile), sha256(newFile));
     }
 

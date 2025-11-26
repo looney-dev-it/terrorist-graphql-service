@@ -1,2 +1,23 @@
-spring.application.name=TerroristBE
-server.port=8000
+spring:
+  application:
+    name: TerroristBE
+  datasource:
+    url: jdbc:sqlite:data/terrorist.db
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8000
+app:
+  ingestion:
+    url: "https://finances.belgium.be/sites/default/files/thesaurie/Consolidated%20list.xlsx"
+    local-terror-file: "data/terror-list-be.xlsx"
+    local-terror-file-new: "data/terror-list-be-new.xlsx"
+    archive-folder: "data/archive"
+logging:
+  level:
+    root: INFO
+    com.ehb.javaadvanced.TerroristBE: DEBUG

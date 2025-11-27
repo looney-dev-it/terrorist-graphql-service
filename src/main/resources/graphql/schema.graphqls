@@ -1,5 +1,32 @@
 type Query {
-    terroristsByLastName(lastname: String!): [Terrorist!]!
+    """
+    Search by lastname
+    - Ignore Case
+    - Partial search (LIKE '%...%')
+    Example: terroristsByLastname(lastname: "smi") will also return "Smith", "smith", "SMITH"
+    """
+    terroristsByLastname(lastname: String!): [Terrorist!]!
+    """
+    Search by firstname
+    - Ignore Case
+    - Partial search (LIKE '%...%')
+    Example: terroristsByFirstname(firstname: "joh") will also return "John", "john", "JOHN"
+    """
+    terroristsByFirstname(firstname: String!): [Terrorist!]!
+    """
+    Search by wholename
+    - Ignore Case
+    - Partial search (LIKE '%...%')
+    Example: terroristsByWholename(wholename: "smi") will also return "Smith", "smith", "SMITH"
+    """
+    terroristsByWholename(wholename: String!): [Terrorist!]!
+    """
+    Search by nrn (national register number)
+    - Search will only take numbers into account to avoid formatting issue
+    Example: terroristsByNrn(nrn: "11.22.33-444.55")
+                the query will search for number 11223344455 in the nrn column which has also be normalized
+    """
+    terroristsByNrn(nrn: String!): [Terrorist!]!
 }
 
 type Terrorist {

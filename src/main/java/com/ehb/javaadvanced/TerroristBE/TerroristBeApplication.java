@@ -5,8 +5,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling
 public class TerroristBeApplication {
 
 	public static void main(String[] args) {
@@ -14,12 +16,8 @@ public class TerroristBeApplication {
 	}
 
     /* @TODO
-          Run the import at start but schedule it afterwards
-          Enrich the GraphQL queries to make the search with other and various criterias
-            also  foresee queries like '%xxx%' alike ...
-
-          If time left => foresee to split cell multiple line in to an extra table linked by Id
-                so that the query like can include the related ...
+          Explore subscription to notify if a new list has been activated
+          Explore Discovery Introspection
     *
     *
     * */

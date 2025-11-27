@@ -11,10 +11,15 @@ spring:
     database-platform: org.hibernate.community.dialect.SQLiteDialect
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
 server:
   port: 8000
 app:
+  schedule:
+    cron: "0 0 2 * * MON" # 2.00 at Monday
+    #cron: "0 */15 * * * *" # every 15 minutes
+    # cron: "0 0/1 * * * *" # every minute
+
   ingestion:
     url: "https://finances.belgium.be/sites/default/files/thesaurie/Consolidated%20list.xlsx"
     local-terror-file: "data/terror-list-be.xlsx"

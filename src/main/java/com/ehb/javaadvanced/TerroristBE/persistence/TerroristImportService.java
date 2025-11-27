@@ -17,6 +17,13 @@ public class TerroristImportService {
 
     public void importTerrorists(ArrayList<Terrorist> terrorists){
         log.debug("Streaming Terrorists list : " + terrorists.size());
+
+        long count = repository.count();
+        if (count > 0) {
+            log.debug("Existing records found: " + count + " → deleting before import");
+            repository.deleteAllInBatch();
+        }
+
         List<TerroristEntity> entities = terrorists.stream()
                 .map(TerroristMapper::toEntity)
                 .toList();

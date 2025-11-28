@@ -1,6 +1,10 @@
 spring:
   application:
     name: TerroristBE
+  security:
+    user:
+      name: disabled
+      password: disabled
   graphql:
     graphiql:
       enabled: true
@@ -19,7 +23,6 @@ app:
     cron: "0 0 2 * * MON" # 2.00 at Monday
     #cron: "0 */15 * * * *" # every 15 minutes
     # cron: "0 0/1 * * * *" # every minute
-
   ingestion:
     url: "https://finances.belgium.be/sites/default/files/thesaurie/Consolidated%20list.xlsx"
     local-terror-file: "data/terror-list-be.xlsx"
@@ -29,3 +32,5 @@ logging:
   level:
     root: INFO
     com.ehb.javaadvanced.TerroristBE: DEBUG
+jwt:
+  secret: "e9CRWF32e4UzWs8J10ndhmy50R5p9zMIaadza&JJo,dein,eijzdzdzda&"

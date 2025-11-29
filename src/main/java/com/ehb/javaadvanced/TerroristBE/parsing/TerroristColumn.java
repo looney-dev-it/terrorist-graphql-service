@@ -1,5 +1,9 @@
 package com.ehb.javaadvanced.TerroristBE.parsing;
 
+/**********
+ * ColumnMapper of the Excel
+ */
+
 public enum TerroristColumn {
     LASTNAME(0),
     FIRSTNAME(1),

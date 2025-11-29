@@ -13,6 +13,15 @@ import java.nio.file.StandardCopyOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/********************************
+ * Manage to version the terrorist list if a download retrieves a newer version
+ * Philosophy :
+ *         Active file : terror-list-be.xlsx
+ *         Archive file : terror-list-be-<date>.xlsx
+ *         New file : terror-list-be-new.xlsx
+ */
+
+
 @Service
 public class FileVersioningService {
 
@@ -20,11 +29,6 @@ public class FileVersioningService {
 
     @Autowired IngestionProperties ingestionProperties;
 
-    /* Philosophy :
-        Active file : terror-list-be.xlsx
-        Archive file : terror-list-be-<date>.xlsx
-        New file : terror-list-be-new.xlsx
-     */
     public void doVersioning() throws IOException {
         Files.createDirectories(Path.of(ingestionProperties.getArchiveFolder()));
         LocalDateTime now = LocalDateTime.now();

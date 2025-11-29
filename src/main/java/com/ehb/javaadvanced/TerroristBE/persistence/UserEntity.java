@@ -2,6 +2,12 @@ package com.ehb.javaadvanced.TerroristBE.persistence;
 
 import jakarta.persistence.*;
 
+
+/***********************************
+ * Persistent Entity of the User - Mapping to database table
+ */
+
+
 @Entity
 @Table(name="users")
 public class UserEntity {

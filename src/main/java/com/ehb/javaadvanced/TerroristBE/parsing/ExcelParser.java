@@ -12,6 +12,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/*******************
+ * Utility Class to parse the ExcelList to Terrorist List object
+ */
+
 @Service
 public class ExcelParser {
 

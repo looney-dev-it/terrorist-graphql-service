@@ -8,6 +8,8 @@ spring:
   graphql:
     graphiql:
       enabled: true
+    websocket:
+      path: /graphql
   datasource:
     url: jdbc:sqlite:data/terrorist.db
     driver-class-name: org.sqlite.JDBC
@@ -15,7 +17,7 @@ spring:
     database-platform: org.hibernate.community.dialect.SQLiteDialect
     hibernate:
       ddl-auto: update
-    show-sql: false
+    show-sql: true
 server:
   port: 8000
 app:

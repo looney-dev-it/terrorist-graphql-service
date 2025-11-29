@@ -4,6 +4,11 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 
+
+/***********************************
+ * Persistent Entity of the TerroristHit - Mapping to database table
+ */
+
 @Entity
 @Table(name = "terroristhits")
 public class TerroristHitEntity {

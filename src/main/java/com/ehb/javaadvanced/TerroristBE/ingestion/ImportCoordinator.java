@@ -14,6 +14,18 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 
+/***************************
+ * Coordinate the import of Excel Terror List
+ *
+ * Philosophy :
+ *  Starts with the application start :
+ *      Download the Excel
+ *      Compare the new file to the current version
+ *      If different => Perform the versioning, and import the data into the database
+ *      If identical => delete the fresh downloaded file
+ */
+
+
 @Service
 public class ImportCoordinator {
     private static final Logger log = LoggerFactory.getLogger(ImportCoordinator.class);

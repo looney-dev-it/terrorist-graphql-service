@@ -29,6 +29,24 @@ type Query {
     terroristsByNrn(nrn: String!): [Terrorist!]!
 }
 
+type Subscription {
+    terroristHitAdded: TerroristHit!
+}
+
+
+type TerroristHit {
+    id: ID!
+    user: User!
+    hit_date: String
+    hit_criteria: String
+    hit_content: String
+}
+
+type User {
+    id: ID!
+    username: String
+}
+
 type Terrorist {
     id: ID!
     nrn: String

@@ -1,5 +1,9 @@
 package com.ehb.javaadvanced.TerroristBE.service;
 
+/*****************
+ * Used to facilitate Search Request method arguments
+ */
+
 public class TerroristSearchRequest {
     private String value;
     private TerroristSearchType type;

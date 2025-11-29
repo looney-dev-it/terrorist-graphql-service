@@ -1,13 +1,13 @@
 package com.ehb.javaadvanced.TerroristBE.domain;
 
-import java.util.Date;
-
+// TerroristHit Object returned to GraphQL requests
 public class TerroristHit {
     public long id;
-    public long user_id;
-    public Date hit_date;
-    public String hit_reason;
+    public User user;
+    public String hit_date;
+    public String hit_criteria;
     public String hit_content;
+
 
     public void setId(long id) {
         this.id = id;
@@ -17,28 +17,28 @@ public class TerroristHit {
         return id;
     }
 
-    public void setUser_id(long user_id) {
-        this.user_id = user_id;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public long getUser_id() {
-        return user_id;
+    public User getUser() {
+        return user;
     }
 
-    public void setHit_date(Date hit_date) {
+    public void setHit_date(String hit_date) {
         this.hit_date = hit_date;
     }
 
-    public Date getHit_date() {
+    public String getHit_date() {
         return hit_date;
     }
 
-    public void setHit_reason(String hit_reason) {
-        this.hit_reason = hit_reason;
+    public void setHit_criteria(String hit_criteria) {
+        this.hit_criteria = hit_criteria;
     }
 
-    public String getHit_reason() {
-        return hit_reason;
+    public String getHit_criteria() {
+        return hit_criteria;
     }
 
     public void setHit_content(String hit_content) {

@@ -12,7 +12,6 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
 public class JwtAuthFilter extends OncePerRequestFilter {
@@ -20,10 +19,10 @@ public class JwtAuthFilter extends OncePerRequestFilter {
     @Autowired
     private JwtUtil jwtUtil;
 
-    /******************************$
+    /******************************
      * Intercept all http request before it goes to REST or GRAPHQL Controller in order to check if
      * Authorization & Bearer are present before allowing the further processing
-     */
+     *****************************/
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,

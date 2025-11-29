@@ -3,6 +3,10 @@ package com.ehb.javaadvanced.TerroristBE.ingestion;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+/*********
+ * Mapper to config file application.yml
+ */
+
 @Component
 @ConfigurationProperties(prefix = "app.ingestion")
 public class IngestionProperties {

@@ -9,6 +9,10 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
+/*******************
+ * Map a Row to a TerroristObject based on the TerroristColumn position definition
+ */
+
 public class TerroristRowMapper {
     public static Terrorist mapRow(Row row, XSSFWorkbook wb) {
         Terrorist t = new Terrorist();

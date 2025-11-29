@@ -6,6 +6,12 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
+
+/**********************
+ * TerroristRepository -> contains the Queries that are available in the GraphQL Schema
+ */
+
+
 public interface TerroristRepository extends JpaRepository<TerroristEntity, String> {
     List<TerroristEntity> findByLastnameContainingIgnoreCase(String fragment);
     List<TerroristEntity> findByFirstnameContainingIgnoreCase(String fragment);

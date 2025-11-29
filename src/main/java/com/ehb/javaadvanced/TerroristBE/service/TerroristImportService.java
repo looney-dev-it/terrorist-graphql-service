@@ -12,6 +12,13 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/*******************************
+ * Service to manage the import of the Excel parsed Terrorist list to the database.
+ * If a new list is available -> it will first delete the content of the current table
+ *  before inserting the new records.
+ */
+
 @Service
 public class TerroristImportService {
     private static final Logger log = LoggerFactory.getLogger(TerroristImportService.class);

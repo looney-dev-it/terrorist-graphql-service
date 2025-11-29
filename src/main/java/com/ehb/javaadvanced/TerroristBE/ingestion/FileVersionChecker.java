@@ -8,6 +8,10 @@ import java.nio.file.Path;
 import java.security.MessageDigest;
 import java.util.Arrays;
 
+/*************$$
+ * Validate that files are identical or not - binary check !
+ */
+
 @Service
 public class FileVersionChecker {
 

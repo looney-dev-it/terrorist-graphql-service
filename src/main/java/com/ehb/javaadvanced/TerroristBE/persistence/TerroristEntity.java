@@ -2,6 +2,10 @@ package com.ehb.javaadvanced.TerroristBE.persistence;
 
 import jakarta.persistence.*;
 
+/***********************************
+ * Persistent Entity of the Terrorist - Mapping to database table
+ */
+
 @Entity
 @Table(name = "terrorists")
 public class TerroristEntity {

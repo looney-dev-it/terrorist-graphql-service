@@ -2,3 +2,4 @@ data
 .gradle
 build
 .idea
+client_nodejs/node_modules

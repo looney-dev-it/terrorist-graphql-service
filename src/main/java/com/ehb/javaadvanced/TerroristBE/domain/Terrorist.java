@@ -1,6 +1,7 @@
 package com.ehb.javaadvanced.TerroristBE.domain;
 
 
+// Terrorist Object returned to GraphQL requests
 public class Terrorist {
 
     private Long id;
@@ -19,9 +20,6 @@ public class Terrorist {
     private String regulation;
     private String publicationdate;
     private String embargo;
-
-    // Getters and setters
-
 
     public Long getId() {
         return id;

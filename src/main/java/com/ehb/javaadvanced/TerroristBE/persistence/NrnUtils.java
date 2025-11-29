@@ -1,5 +1,9 @@
 package com.ehb.javaadvanced.TerroristBE.persistence;
 
+/******
+ * Normalize a NRN format -> remove all sign and keep only numbers => safer for matching
+ */
+
 public class NrnUtils {
     public static String normalize(String nrn) {
         if (nrn == null) return null;

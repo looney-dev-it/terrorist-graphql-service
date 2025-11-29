@@ -12,6 +12,11 @@ import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+
+/*******************
+ * Connects to the external URL and download the excel file
+ */
+
 @Service
 public class ExcelDownloadService {
     private static final Logger log = LoggerFactory.getLogger(ExcelDownloadService.class);

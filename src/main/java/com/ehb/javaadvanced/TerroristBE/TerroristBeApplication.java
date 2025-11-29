@@ -15,13 +15,6 @@ public class TerroristBeApplication {
         SpringApplication.run(TerroristBeApplication.class, args);
 	}
 
-    /* @TODO
-          Explore subscription to notify if a new list has been activated
-          Explore Discovery Introspection
-    *
-    *
-    * */
-
     @Bean
     public CommandLineRunner runner(ImportCoordinator coordinator) {
         return args -> {

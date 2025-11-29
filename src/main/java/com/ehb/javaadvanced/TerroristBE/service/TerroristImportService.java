@@ -1,6 +1,9 @@
-package com.ehb.javaadvanced.TerroristBE.persistence;
+package com.ehb.javaadvanced.TerroristBE.service;
 
 import com.ehb.javaadvanced.TerroristBE.domain.Terrorist;
+import com.ehb.javaadvanced.TerroristBE.persistence.TerroristEntity;
+import com.ehb.javaadvanced.TerroristBE.persistence.TerroristMapper;
+import com.ehb.javaadvanced.TerroristBE.persistence.TerroristRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +16,7 @@ import java.util.List;
 public class TerroristImportService {
     private static final Logger log = LoggerFactory.getLogger(TerroristImportService.class);
     @Autowired
-    private TerroristRepository  repository;
+    private TerroristRepository repository;
 
     public void importTerrorists(ArrayList<Terrorist> terrorists){
         log.debug("Streaming Terrorists list : " + terrorists.size());

@@ -2,8 +2,7 @@ package com.ehb.javaadvanced.TerroristBE.ingestion;
 
 import com.ehb.javaadvanced.TerroristBE.domain.Terrorist;
 import com.ehb.javaadvanced.TerroristBE.parsing.ExcelParser;
-import com.ehb.javaadvanced.TerroristBE.persistence.TerroristImportService;
-import com.ehb.javaadvanced.TerroristBE.persistence.TerroristRepository;
+import com.ehb.javaadvanced.TerroristBE.service.TerroristImportService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -7,7 +7,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface TerroristRepository extends JpaRepository<TerroristEntity, String> {
-    List<TerroristEntity> findByLastname(String lastname);
     List<TerroristEntity> findByLastnameContainingIgnoreCase(String fragment);
     List<TerroristEntity> findByFirstnameContainingIgnoreCase(String fragment);
     List<TerroristEntity> findByWholenameContainingIgnoreCase(String fragment);
@@ -15,5 +14,5 @@ public interface TerroristRepository extends JpaRepository<TerroristEntity, Stri
     @Query("SELECT t FROM TerroristEntity t " +
             "WHERE REPLACE(REPLACE(REPLACE(LOWER(t.nrn), 'nrn', ''), '-', ''), '.', '') " +
             "LIKE LOWER(CONCAT('%', :nrn, '%'))")
-    List<TerroristEntity> searchByNormalizedNrn(@Param("nrn") String nrn);
+    List<TerroristEntity> findByNormalizedNrn(@Param("nrn") String nrn);
 }

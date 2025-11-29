@@ -151,4 +151,26 @@ public class TerroristEntity {
     public void setPublicationdate(String publicationdate) {
         this.publicationdate = publicationdate;
     }
+
+    @Override
+    public String toString() {
+        return "TerroristEntity{" +
+                "type='" + type + '\'' +
+                ", id=" + id +
+                ", nrn='" + nrn + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", middlename='" + middlename + '\'' +
+                ", wholename='" + wholename + '\'' +
+                ", gender='" + gender + '\'' +
+                ", birthdate='" + birthdate + '\'' +
+                ", birthplace='" + birthplace + '\'' +
+                ", birthcountry='" + birthcountry + '\'' +
+                ", function='" + function + '\'' +
+                ", remark='" + remark + '\'' +
+                ", regulation='" + regulation + '\'' +
+                ", publicationdate='" + publicationdate + '\'' +
+                ", embargo='" + embargo + '\'' +
+                '}';
+    }
 }
